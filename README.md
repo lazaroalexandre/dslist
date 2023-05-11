@@ -107,14 +107,14 @@ Trechos de código:
 List<GameMinProjection> searchByList(Long listId);
 
 
-##GameListRepository
+# GameListRepository
 
 @Modifying
 @Query(nativeQuery = true, value = "UPDATE tb_belonging SET position = :newPosition WHERE list_id = :listId AND game_id = :gameId")
 void updateBelongingPosition(Long listId, Long gameId, Integer newPosition);
 
 
-##import.sql
+# import.sql
 
 INSERT INTO tb_game_list (name) VALUES ('Aventura e RPG');
 INSERT INTO tb_game_list (name) VALUES ('Jogos de plataforma');
@@ -143,6 +143,6 @@ INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 9, 3);
 INSERT INTO tb_belonging (list_id, game_id, position) VALUES (2, 10, 4);
 
 
-##Script Docker Compose
+# Script Docker Compose
 
 https://gist.github.com/acenelio/5e40b27cfc40151e36beec1e27c4ff71
